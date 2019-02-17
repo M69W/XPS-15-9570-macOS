@@ -13,8 +13,6 @@
 ![setting](./images/Trackpad.png)
 ![setting](./images/Siri.png)
 
-Base on https://github.com/shenlinsl/DELL-XPS-15-9570-8950-4K-macOS-Mojave.  
-And do something chaned.
 
 
 
