@@ -51,4 +51,4 @@ If your xps 15 Displays is 4K, just chang config.plist 1080p patch for 4k patch.
 Thanks to:   
 Austere.J(FireWolf), shenlinsl and so on  
 https://www.tonymacx86.com/threads/fix-coffee-lake-intel-uhd-graphics-630-on-macos-mojave-kernel-panic-due-to-divide-by-zero.261687/  
-https://github.com/shenlinsl/DELL-XPS-15-9570-8950-4K-macOS-Mojave  
+https://www.tonymacx86.com/threads/fix-coffee-lake-intel-uhd-graphics-630-on-macos-mojave-hdmi-output-issue-public-testing-stage.275126/
