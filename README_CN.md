@@ -212,13 +212,6 @@ can find HoRNDIS.kext in /Library/Extensions/HoRNDIS.kext
 awesome-mac  
 https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md   
 
-CPU 查看变频(intel-power-gadget)  
-https://software.intel.com/en-us/articles/intel-power-gadget-20   
-
-调整 macOS CPU性能  
-https://github.com/stevezhengshiqi/one-key-cpufriend  
-
-
 PlistEdit Pro  
 https://www.fatcatsoftware.com/plisteditpro/   
 https://www.icopybot.com/download.htm  (for window  
@@ -263,7 +256,14 @@ https://www.tonymacx86.com/threads/guide-installing-3rd-party-kexts-el-capitan-s
 至此，config.plist可以去掉-v(啰嗦模式)  
 
 An iDiot's Guide To Lilu and its Plug-ins  
-https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.260063/ 
+https://www.tonymacx86.com/threads/an-idiots-guide-to-lilu-and-its-plug-ins.260063/  
+
+
+CPU 查看变频(intel-power-gadget)  
+https://software.intel.com/en-us/articles/intel-power-gadget-20   
+
+调整 macOS CPU性能  
+https://github.com/stevezhengshiqi/one-key-cpufriend   
 
 ### 双系统时间  
 Windows将这个时钟作为本地时间来看待，也就是CMOS时间就是北京时间。  
@@ -273,9 +273,6 @@ MacOSX将这个时钟作为Coordinated Universal Time (UTC) 世界标准时间�
 
 windows10 管理员身份运行 cmd (搜索‘cmd’，右键管理员运行)  
 `Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1`
-
-### 调整 macOS CPU性能	调整 macOS CPU性能   
-https://github.com/daliansky/XiaoMi-Pro/blob/master/one-key-cpufriend/README_CN.md  
 
 ### 字体发虚  
 一键开启 macOS HiDPI    
