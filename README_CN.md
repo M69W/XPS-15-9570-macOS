@@ -5,7 +5,7 @@
 制作U盘 软件TransMac：百度或官网 https://www.acutesystems.com/scrtm.htm
 
 镜像(10.14.4): 选一，或自行官网下载  
-黑苹果小兵https://blog.daliansky.net/  macOS-Mojave-10.14.4-18E226-official-version-with-Clover-4903-original-image.html  
+黑苹果小兵 https://blog.daliansky.net/macOS-Mojave-10.14.4-18E226-official-version-with-Clover-4903-original-image.html  
 远景论坛版主：  
 1.【Len's DMG】macOS Mojave 10.14.4正式版 18E226  With Clover 4903原版镜像 http://bbs.pcbeta.com/viewthread-1809650-1-1.html  
 2.【Len's DMG】macOS Mojave 10.14.4 18E2034  With Clover 4907 iMac2019九代特别版 http://bbs.pcbeta.com/viewthread-1809790-1-1.html  

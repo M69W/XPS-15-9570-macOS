@@ -1,3 +1,7 @@
+ [中文](README_CN.md) |
+ [中文教程](xps%209570黑苹果安装教程(更新中).docx)
+
+
 ## XPS 9570 hackintosh
 
 https://github.com/bavariancake/XPS9570-macOS  
