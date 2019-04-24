@@ -21,18 +21,18 @@
 2.设置Clover 启动  
 F2进入BIOS设置：  
 1.Secure Boot - Secure Boot Enable里改成Disabled  
-![setting](./images/图2.png)  
+![setting](./images/图片1.png)  
 
 2.设置U盘 启动 Clover  
-![setting](./images/图2.png)  
-![setting](./images/图2.png)  
-![setting](./images/图2.png)  
+![setting](./images/图片2.png)  
+![setting](./images/图片3.png)  
+![setting](./images/图片4.png)  
 选CLOVER  
-![setting](./images/图2.png)  
+![setting](./images/图片5.png)  
 
 选CLOVERX64.efi, OK  
-![setting](./images/图2.png)  
-![setting](./images/图2.png)  
+![setting](./images/图片6.png)  
+![setting](./images/图片7.png)  
 
 
 
@@ -51,11 +51,11 @@ macOS 安装过程，略
 Window下  
 最终目的是硬盘启动，放Clover到ESP /EFI 下  
 打开DiskGenius，  
-![setting](./images/图2.png)  
+![setting](./images/图片8.png)  
 教程中有多硬盘和多个EFI分区，是视情况而定，默认是第一个  
-![setting](./images/图2.png)  
-![setting](./images/图2.png)  
-![setting](./images/图2.png)  
+![setting](./images/图片9.png)  
+![setting](./images/图片10.png)  
+![setting](./images/图片11.png)  
 这样就完成了window下将Clover放入硬盘的操作。  
 
 ### macOS下
@@ -64,12 +64,12 @@ Window下
 找到Tools 的第一行【Mount EFI】，一般来说，有多少个EFI分区这里就显示多少个。  
 一个硬盘就一个EFI，插入U盘时U盘的EFI分区也会在这里显示，（找到你的window 默认的那个，如果是多硬盘多系统，  
 也可以放非window 默认的分区下。），题外，没有EFI分区，请自己百度。  
-![setting](./images/图2.png)  
-![setting](./images/图2.png)  
+![setting](./images/图片12.png)  
+![setting](./images/图片13.png)  
 
-如果下载的CLVOER 不对应，需修改一个地方  
-![setting](./images/图2.png)  
-![setting](./images/图2.png)  
+#### 如果下载的CLVOER 不对应，需修改一个地方  
+![setting](./images/图片14.png)  
+![setting](./images/图片15.png)  
 
 这里的补丁感兴趣看这里  
 https://www.tonymacx86.com/threads/fix-coffee-lake-intel-uhd-graphics-630-on-macos-mojave-hdmi-output-issue-public-testing-stage.275126/    
@@ -77,9 +77,8 @@ https://www.tonymacx86.com/threads/fix-coffee-lake-intel-uhd-graphics-630-on-mac
 https://github.com/bavariancake/XPS9570-macOS/commit/64c16d9bd88620e54f5aa987fec829c90cb37a26    
 
 https://www.tonymacx86.com/threads/fix-coffee-lake-intel-uhd-graphics-630-on-macos-mojave-kernel-panic-due-to-divide-by-zero.261687/     
-
-![setting](./images/图2.png)  
-![setting](./images/图2.png)  
+ 
+![setting](./images/图片18.png)  
 
 
 
@@ -91,26 +90,27 @@ https://www.tonymacx86.com/threads/fix-coffee-lake-intel-uhd-graphics-630-on-mac
 此处为终端操作，主要是考虑到没有联网，内置软件操作会方便点。  
 可以借助软件操作，软件操作略(待完善)。  
 找到并打开【启动台】(logo是小火箭)，【其他】，【终端】  
-下面只是示范，·目的是使用终端和命令，把触摸板驱动放到指定目录下，重建缓存·。 
-![setting](./images/图2.png)   
-
-驱动在xps9570-Touchpad 目录下，鼠标拖这个文件夹到终端，如下：  
-![setting](./images/图2.png)  
+下面只是示范，`目的是使用终端和命令，把触摸板驱动放到指定目录下，重建缓存`。  
+![setting](./images/图片19.png)  
+驱动在xps9570-Touchpad 目录下，鼠标拖这个触摸板驱动的文件夹到终端，如下：   
+![setting](./images/图片20.png)   
 
 然后方向键定位到最前，如下：  
-![setting](./images/图2.png)  
+![setting](./images/图片21.png)  
 输入cd 空格,即：   
-![setting](./images/图2.png)  
-回车后显示：表示当前目录是这个文件夹下。  
-![setting](./images/图2.png)  
-看下是不是有三个驱动,命令ls,回车，显示如下  
-![setting](./images/图2.png)  
+![setting](./images/图片22.png)   
+回车后显示：表示当前目录是这个文件夹下。   
+![setting](./images/图片23.png)   
+看下是不是有三个驱动,命令`ls`,回车，显示如下   
+![setting](./images/图片24.png)   
 然后执行下面的命令（每次一条，第一次需输入密码，最后一条是重建缓存的命令）  
 把三个触摸屏驱动放在了L/E，（也可以放S/L/E下）  
 `sudo cp -R VoodooI2C.kext /Library/Extensions`  
 `sudo cp -R VoodooI2CHID.kext /Library/Extensions`    
 `sudo cp -R VoodooPS2Controller.kext /Library/Extensions`    
 `sudo kextcache -i /`  
+
+![setting](./images/图片25.png)   
 至此，操作驱动到L/E的操作结束。  
 可以将config.plist里去掉-v(啰嗦模式)，不操作此步骤也可以  
 最后，重启即可  
