@@ -1,0 +1,9 @@
+sudo cp -R VoodooI2CHID.kext /Library/Extensions
+
+sudo cp -R VoodooPS2Controller.kext /Library/Extensions
+
+sudo cp -R VoodooI2C.kext /Library/Extensions
+
+sudo kextcache -i /
+
+依然运行以上4条命令，即完成触摸板驱动安装到 L/E 
