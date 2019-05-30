@@ -4,7 +4,7 @@
 下载软件和镜像
 制作U盘 软件TransMac：百度或官网 https://www.acutesystems.com/scrtm.htm
 
-镜像(10.14.4): 选一，或自行官网下载  
+镜像选一，或自行官网下载  
 黑苹果小兵 [【黑果小兵】macOS Mojave 10.14.5 18F132 正式版 with Clover 4928原版镜像](https://blog.daliansky.net/macOS-Mojave-10.14.5-18F132-official-version-with-Clover-4928-original-image.html)  
 远景论坛版主：Len's DMG】[【Len's DMG】macOS Mojave 10.14.5 18F132 With Clover 4928 and OC 双引导镜像 ](http://bbs.pcbeta.com/viewthread-1815882-1-1.html)
 
