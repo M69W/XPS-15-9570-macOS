@@ -185,21 +185,21 @@ https://github.com/acidanthera/VirtualSMC/blob/master/Docs/FAQ.md
 Virtual SMC on MOJAVE
 https://www.tonymacx86.com/threads/virtual-smc-on-mojave.262360/   
 
-FakeSMC -><- VirtualSMC
+FakeSMC -><- VirtualSMC  
 
-### FakeSMC kexts/Other:
-ACPIBatteryManager.kext
-FakeSMC.kext
+### FakeSMC kexts/Other:  
+ACPIBatteryManager.kext  
+FakeSMC.kext  
 
-### kexts/Other:
-SMCBatteryManager.kext
-SMCLightSensor.kext
-SMCProcessor.kext
-SMCSuperIO.kext
-VirtualSMC.kext
+### kexts/Other:  
+SMCBatteryManager.kext  
+SMCLightSensor.kext  
+SMCProcessor.kext  
+SMCSuperIO.kext  
+VirtualSMC.kext  
 
-### drivers64UEFI:
-VirtualSmc.efi
+### drivers64UEFI:  
+VirtualSmc.efi  
 
 
 
