@@ -1,14 +1,12 @@
-## XPS 9570黑苹果教程，更新中(2019-04-24)
+## XPS 9570黑苹果教程，更新中(2019-05-30)
 
 ### Window 下准备：
 下载软件和镜像
 制作U盘 软件TransMac：百度或官网 https://www.acutesystems.com/scrtm.htm
 
 镜像(10.14.4): 选一，或自行官网下载  
-黑苹果小兵 https://blog.daliansky.net/macOS-Mojave-10.14.4-18E226-official-version-with-Clover-4903-original-image.html  
-远景论坛版主：  
-1.【Len's DMG】macOS Mojave 10.14.4正式版 18E226  With Clover 4903原版镜像 http://bbs.pcbeta.com/viewthread-1809650-1-1.html  
-2.【Len's DMG】macOS Mojave 10.14.4 18E2034  With Clover 4907 iMac2019九代特别版 http://bbs.pcbeta.com/viewthread-1809790-1-1.html  
+黑苹果小兵 [【黑果小兵】macOS Mojave 10.14.5 18F132 正式版 with Clover 4928原版镜像](https://blog.daliansky.net/macOS-Mojave-10.14.5-18F132-official-version-with-Clover-4928-original-image.html)  
+远景论坛版主：Len's DMG】[【Len's DMG】macOS Mojave 10.14.5 18F132 With Clover 4928 and OC 双引导镜像 ](http://bbs.pcbeta.com/viewthread-1815882-1-1.html)
 
 ### 制作U盘：  
 步骤搜百度先，下次更新  
@@ -186,6 +184,28 @@ https://github.com/acidanthera/VirtualSMC/releases
 https://github.com/acidanthera/VirtualSMC/blob/master/Docs/FAQ.md   
 Virtual SMC on MOJAVE
 https://www.tonymacx86.com/threads/virtual-smc-on-mojave.262360/   
+
+FakeSMC -><- VirtualSMC
+
+### FakeSMC kexts/Other:
+ACPIBatteryManager.kext
+FakeSMC.kext
+
+### kexts/Other:
+SMCBatteryManager.kext
+SMCLightSensor.kext
+SMCProcessor.kext
+SMCSuperIO.kext
+VirtualSMC.kext
+
+### drivers64UEFI:
+VirtualSmc.efi
+
+
+
+
+
+
 
 CPUFriend  
 https://github.com/acidanthera/CPUFriend/releases   

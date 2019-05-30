@@ -4,17 +4,19 @@
 
 ## XPS 9570 hackintosh
 
+
+### Here is only for XPS-15-9570-i5-8300h-1080p-DW1560-macOS-Mojave
+### XPS 9570 hackintosh's different found out are CPU and display.
+### You attention
+if you Laptop is not same to mine,
+you need to change `dpcd-max-link-rate` like: 
+`dpcd-max-link-rate =<14000000> (or <0a000000> for 1080p)`
+
+### More Information See  
 https://github.com/bavariancake/XPS9570-macOS  
 https://github.com/Xigtun/xps-9570-mojave  
 https://github.com/LuletterSoul/Dell-XPS-15-9570-macOS-Mojave  
 
-
-
-
-
-
-### Here is only for XPS-15-9570-i5-8300h-1080p-DW1560-macOS-Mojave
-### XPS 9570 hackintosh's different found out are CPU and display.
 
 [ Modify macOS CPU Performance](https://github.com/stevezhengshiqi/one-key-cpufriend) as needed.
 
@@ -23,11 +25,6 @@ Put Touchpad driver into L/E(or S/L/E) and rebuild the kext cache
 `sudo cp -R VoodooPS2Controller.kext /Library/Extensions`  
 `sudo cp -R VoodooI2C.kext /Library/Extensions`  
 `sudo kextcache -i /`  
-
-
-
-
-More information see https://github.com/LuletterSoul/Dell-XPS-15-9570-macOS-Mojave  
 
 
 

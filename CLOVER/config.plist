@@ -18,6 +18,8 @@
 				<false/>
 				<key>FakeLPC</key>
 				<false/>
+				<key>FixDarwin</key>
+				<false/>
 				<key>FixHPET</key>
 				<false/>
 				<key>FixIPIC</key>
@@ -259,7 +261,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>slide=0 darkwake=1 -ngfxbeta npci=0x2000 dart=0 brcmfx-country=#a -disablegfxfirmware -lilubetaall agdpmod=vit9696 -igfxcflhdmi</string>
+		<string>slide=0 darkwake=1 -ngfxbeta npci=0x2000 dart=0 brcmfx-country=#a -disablegfxfirmware -lilubetaall agdpmod=vit9696 -igfxmlr -igfxcflhdmi -igfxcflhdmi2</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -275,18 +277,9 @@
 		<key>StrictHibernate</key>
 		<true/>
 		<key>Timeout</key>
-		<integer>1</integer>
+		<integer>5</integer>
 		<key>XMPDetection</key>
 		<false/>
-	</dict>
-	<key>BootGraphics</key>
-	<dict>
-		<key>EFILoginHiDPI</key>
-		<integer>0</integer>
-		<key>UIScale</key>
-		<integer>0</integer>
-		<key>flagstate</key>
-		<integer>0</integer>
 	</dict>
 	<key>CPU</key>
 	<dict>
@@ -314,11 +307,21 @@
 				<data>
 				AACbPg==
 				</data>
+				<key>Comment-dpcd-max-link-rate</key>
+				<string>0x0a for 1080p displays,</string>
 				<key>device-id</key>
 				<data>
 				mz4AAA==
 				</data>
+				<key>dpcd-max-link-rate</key>
+				<data>
+				CgAAAA==
+				</data>
 				<key>enable-cflbkit</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>enable-dpcd-max-link-rate-fix</key>
 				<data>
 				AQAAAA==
 				</data>
@@ -514,45 +517,6 @@
 		</array>
 		<key>KernelXCPM</key>
 		<false/>
-		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>ALT: Set max link rate to 0x0A (HBR) for laptops with 1080p display for 10.14.4 (by FireWolf / bavariancake)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SIPDBEiD+whysw==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>AppleIntelCFLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				gH3BAHUExkXBFA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>ALT: Set max link rate to 0x0A (HBR) for laptops with 1080p display for 10.14.3 and prior (by FireWolf)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SIPDBEiD+why0A==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>AppleIntelCFLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				gH3BAHUExkXBCg==
-				</data>
-			</dict>
-		</array>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
@@ -605,12 +569,6 @@
 		<string>0x1A</string>
 		<key>ProductName</key>
 		<string>MacBookPro15,1</string>
-		<key>SerialNumber</key>
-		<string>C02WXAZ1KGYG</string>
-		<key>SmUUID</key>
-		<string>3BC099BF-FCB6-4E20-9AEB-C64C04075E18</string>
-		<key>Trust</key>
-		<false/>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
