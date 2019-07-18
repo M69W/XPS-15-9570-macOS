@@ -15,10 +15,8 @@
 				<key>AddHDMI</key>
 				<false/>
 				<key>AddPNLF</key>
-				<false/>
+				<true/>
 				<key>FakeLPC</key>
-				<false/>
-				<key>FixDarwin</key>
 				<false/>
 				<key>FixHPET</key>
 				<false/>
@@ -261,7 +259,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>slide=0 darkwake=1 -ngfxbeta npci=0x2000 dart=0 brcmfx-country=#a -disablegfxfirmware -lilubetaall agdpmod=vit9696 -igfxmlr -igfxcflhdmi -igfxcflhdmi2</string>
+		<string>slide=0 darkwake=1 -ngfxbeta npci=0x2000 dart=0 brcmfx-country=#a -lilubetaall agdpmod=vit9696</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -307,8 +305,6 @@
 				<data>
 				AACbPg==
 				</data>
-				<key>Comment-dpcd-max-link-rate</key>
-				<string>0x0a for 1080p displays,</string>
 				<key>device-id</key>
 				<data>
 				mz4AAA==
@@ -329,6 +325,10 @@
 				<data>
 				AQAAAA==
 				</data>
+				<key>enable-lspcon-support</key>
+				<data>
+				AQAAAA==
+				</data>
 				<key>framebuffer-con1-alldata</key>
 				<data>
 				AQUJAAAEAACHAQAA
@@ -342,6 +342,14 @@
 				AwQKAAAIAACHAQAA
 				</data>
 				<key>framebuffer-con2-enable</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con2-has-lspcon</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>framebuffer-con2-preferred-lspcon-mode</key>
 				<data>
 				AQAAAA==
 				</data>
@@ -523,11 +531,7 @@
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
-		<string>0x67</string>
-		<key>ROM</key>
-		<data>
-		3X4MEllz
-		</data>
+		<string>0x3E7</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
