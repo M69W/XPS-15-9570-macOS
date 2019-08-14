@@ -259,7 +259,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>slide=0 darkwake=1 -ngfxbeta npci=0x2000 dart=0 brcmfx-country=#a -lilubetaall agdpmod=vit9696</string>
+		<string>slide=0 darkwake=1 -ngfxbeta npci=0x2000 dart=0 brcmfx-country=#a agdpmod=vit9696</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
