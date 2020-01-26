@@ -1,21 +1,20 @@
  [中文](README_CN.md) |
  [中文教程](xps%209570黑苹果安装教程(更新中).docx)
 
+ OC 来自群友 @毒舌のロリコン，这里只是个人备份  
+ clover 忘记来自原版来自谁了，小修改后找不到原版模样了  
 
-## XPS 9570 hackintosh
-
-
-### Here is only for XPS-15-9570-i5-8300h-1080p-DW1560-macOS-Mojave
-### XPS 9570 hackintosh's different found out are CPU and display.
-### You attention
-if you Laptop is not same to mine,
-you need to change `dpcd-max-link-rate` like: 
-`dpcd-max-link-rate =<14000000> (or <0a000000> for 1080p)`
 
 ### More Information See  
+### CLOVER  
 https://github.com/bavariancake/XPS9570-macOS  
 https://github.com/Xigtun/xps-9570-mojave  
 https://github.com/LuletterSoul/Dell-XPS-15-9570-macOS-Mojave  
+https://github.com/smallssnow/XPS9570-8570H-macos  
+https://github.com/AnneviLL/xps15-9570-hackintosh-EFI  
+### OC  
+https://github.com/xxxzc/xps15-9570-macos  
+https://github.com/OldDream/Dell-XPS-15-9570-macOS-Mojave  
 
 
 [ Modify macOS CPU Performance](https://github.com/stevezhengshiqi/one-key-cpufriend) as needed.
