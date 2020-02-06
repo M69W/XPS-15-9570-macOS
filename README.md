@@ -2,7 +2,7 @@
  [中文教程](xps%209570黑苹果安装教程(更新中).docx)~~
 
  - `OC` from QQ群友 @毒舌のロリコン，here is a backup
- - `OC-0.5.6-MOD-UI-HDMI` base on [xxxzc's OC](https://github.com/xxxzc/xps15-9570-macos/releases/tag/200118-1) change a liittle for HDMI Output with [0.5.6 mod OC](http://bbs.pcbeta.com/viewthread-1838814-1-1.html) 
+ - `OC-0.5.6-MOD-UI-HDMI` base on [xxxzc's OC](https://github.com/xxxzc/xps15-9570-macos/releases/tag/200130) change a liittle for HDMI Output with [0.5.6 mod OC](http://bbs.pcbeta.com/viewthread-1838814-1-1.html) 
  - `clover`  too long time to forget base on what it is.
 
 
