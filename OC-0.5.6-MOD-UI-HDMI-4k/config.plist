@@ -182,9 +182,9 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
-				<key>device-id</key>	
-				<data>	
-				cKEAAA==	
+				<key>device-id</key>
+				<data>
+				cKEAAA==
 				</data>
 				<key>layout-id</key>
 				<integer>72</integer>
