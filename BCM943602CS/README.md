@@ -1,4 +1,8 @@
 ## Windows 下安装驱动  
+
+测试发现：
+j0白、j1黑、j2灰(`j0W、j1B、j2G`),此接法信号还不错
+
   
 [博通 943602CS win10最强驱动  1.3G 满速](http://bbs.pcbeta.com/viewthread-1848317-1-1.html) 
 
