@@ -1,3 +1,6 @@
+Broadcom BCM943602CS 1750Mbps PCI-E WiFi Adapter Driver Download  
+http://www.minihere.com/broadcom-bcm943602cs-1750mbps-pci-e-wifi-adapter-driver-download.html
+
 ## Windows 下安装驱动  
 
 测试发现：
