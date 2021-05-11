@@ -82,8 +82,9 @@ https://deviwiki.com/wiki/Broadcom_BCM943602CDP
 B站(03:52)：https://www.bilibili.com/video/BV1yE411j7kk
 
 
-BCM943602CDP蓝牙天线：https://tieba.baidu.com/p/6791303917
+BCM943602CDP蓝牙天线：https://tieba.baidu.com/p/6791303917  
 ![网卡IPEX1天线底座](2CDP_j0123.jpg) 
+
 ```
 O           -
 O           -
@@ -103,3 +104,9 @@ BootCamp驱动
 BootCamp6.1.7866 > $WinPEDriver$
 ```
 
+https://www.yiem.net/archives/zui-xin-shi-yong-maczi-dai-de-qi-dong-zhuan-huan-zhu-li-bootcampan-zhuang-windows10de-xiang-xi-fang-fa-jiao-cheng-macbookpro1013.html
+
+https://support.apple.com/kb/DL2007?locale=zh_CN  
+下载 macOS Mojave 10.14.5 Boot Camp 更新  
+
+https://beikeit.com/post-875.html  
