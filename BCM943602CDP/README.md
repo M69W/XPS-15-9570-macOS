@@ -54,6 +54,52 @@ BCM43602CDP 网卡 使用转换板连接天线，不建议 IPEX1
    - 但可以用 BCM943602CS，看上面的截图
 
 
+BCM943602CDP: iMac 2017款 [21.5英寸](https://support.apple.com/kb/SP758?locale=zh_CN) / [27英寸](https://support.apple.com/kb/SP760?locale=zh_CN)
+Apple苹果一体机iMac台式电脑A1418 A1419超薄21 27寸MK142
+
+```
+2017 年
+
+iMac（视网膜 5K 显示屏，27 英寸，2017 年）
+机型标识符：iMac18,3
+部件号：MNE92、MNEA2、MNED2
+技术规格：iMac（视网膜 5K 显示屏，27 英寸，2017 年）
+
+iMac（视网膜 4K 显示屏，21.5 英寸，2017 年）
+机型标识符：iMac18,2
+部件号：MNDY2、MNE02
+技术规格：iMac（视网膜 4K 显示屏，21.5 英寸，2017 年）
+
+iMac（21.5 英寸，2017 年）
+机型标识符：iMac18,1
+部件号：MMQA2
+技术规格：iMac（21.5 英寸，2017 年）
+```
 
 
+https://deviwiki.com/wiki/Broadcom_BCM943602CDP
+
+B站(03:52)：https://www.bilibili.com/video/BV1yE411j7kk
+
+
+BCM943602CDP蓝牙天线：https://tieba.baidu.com/p/6791303917
+![网卡IPEX1天线底座](2CDP_j0123.jpg) 
+```
+O           -
+O           -
+O < 蓝牙(j3) -
+O           -
+```
+
+
+## windows 驱动
+https://support.apple.com/zh_CN/downloads/bootcamp  
+```
+BootCamp驱动
+版本：6.1.7866(官方网站似乎无法找到？)
+支持操作系统：Windows 10 64位
+```
+```
+BootCamp6.1.7866 > $WinPEDriver$
+```
 

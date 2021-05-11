@@ -1,0 +1,414 @@
+;;
+;; $ Copyright Broadcom $
+;;
+
+
+[version]
+Signature       = "$Windows NT$"
+Class           = Net
+ClassGUID       = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider        = %V_BCM%
+PnPLockDown	= 1
+DriverVer=11/04/2019, 101.10.152.4
+CatalogFile     = bcmpciedhd63.cat
+
+[Manufacturer]
+	%V_BCM% = BROADCOM, NTamd64.6.2
+
+[ControlFlags]
+	ExcludeFromSelect = *
+
+;	Display Name		Section			DeviceID
+;	------------		-------			--------
+
+;-----------------------------------------------------------------
+; x86, x64 (AMD64, Intel EM64T)
+;
+
+[BROADCOM.NTamd64.6.2]
+	%BCM43XXPCIE_DeviceDesc% = BCM43XAC_NT62_4364, PCI\VEN_14E4&DEV_4464&SUBSYS_07BF106B
+	%BCM43XXPCIE_DeviceDesc% = BCM43XAC_NT62_4355, PCI\VEN_14E4&DEV_43DC&SUBSYS_0843106B
+	%BCM43XXPCIE_DeviceDesc% = BCM43XAC_NT62_4377, PCI\VEN_14E4&DEV_4488&SUBSYS_0870106B
+
+[BCM43XAC_NT62_4364]
+	Include         = netvwifibus.inf
+	Needs           = VWiFiBus.CopyFiles
+	*IfType         = 71    ; IF_TYPE_IEEE80211
+	*MediaType      = 16    ; NdisMediumNative802_11
+	*PhysicalMediaType = 9  ; NdisPhysicalMediumNative802_11
+	Characteristics = 0x84  ; NCF_PHYSICAL | NCF_HAS_UI
+	BusType         = 5	; PCI bus
+	AddReg          = BCM43XX_NT.reg, BCMPCIE43XX.brcm.reg, common.reg, wowl.capabilities.enabled.reg, wowl.std_keywords.reg, cs.std_keywords.reg
+;w8dhd	AddReg          = BCM43XX_NT.reg, BCMPCIE43XX.brcm.reg, common.reg, wowl.capabilities.enabled.reg, wowl.std_keywords.reg, cs.std_keywords.reg
+	CopyFiles       = BCM43XAC_NT62_4364.files
+
+[BCM43XAC_NT62_4355]
+	Include         = netvwifibus.inf
+	Needs           = VWiFiBus.CopyFiles
+	*IfType         = 71    ; IF_TYPE_IEEE80211
+	*MediaType      = 16    ; NdisMediumNative802_11
+	*PhysicalMediaType = 9  ; NdisPhysicalMediumNative802_11
+	Characteristics = 0x84  ; NCF_PHYSICAL | NCF_HAS_UI
+	BusType         = 5	; PCI bus
+	AddReg          = BCM43XX_NT.reg, BCMPCIE43XX.brcm.reg, common.reg, wowl.capabilities.enabled.reg, wowl.std_keywords.reg, cs.std_keywords.reg
+;w8dhd	AddReg          = BCM43XX_NT.reg, BCMPCIE43XX.brcm.reg, common.reg, wowl.capabilities.enabled.reg, wowl.std_keywords.reg, cs.std_keywords.reg
+	CopyFiles       = BCM43XAC_NT62_4355.files
+
+[BCM43XAC_NT62_4377]
+	Include         = netvwifibus.inf
+	Needs           = VWiFiBus.CopyFiles
+	*IfType         = 71    ; IF_TYPE_IEEE80211
+	*MediaType      = 16    ; NdisMediumNative802_11
+	*PhysicalMediaType = 9  ; NdisPhysicalMediumNative802_11
+	Characteristics = 0x84  ; NCF_PHYSICAL | NCF_HAS_UI
+	BusType         = 5	; PCI bus
+	AddReg          = BCM43XX_NT.reg, BCMPCIE43XX.brcm.reg, common.reg, wowl.capabilities.enabled.reg, wowl.std_keywords.reg, cs.std_keywords.reg
+;w8dhd 	AddReg          = BCM43XX_NT.reg, BCMPCIE43XX.brcm.reg, common.reg, roaming.options.reg, wowl.capabilities.enabled.reg, wowl.std_keywords.reg, cs.std_keywords.reg
+	CopyFiles       = BCM43XAC_NT62_4377.files
+
+[BCM43XAC_NT62_4364.Services]
+	Include = netvwifibus.inf
+	Needs   = VWiFiBus.Services
+	AddService = BCMPCIEDHD63, 2, BCMPCIE43XX_NT62.Service, common.EventLog
+;w8dhd	AddService = BCMPCIEDHD63, 2, BCMPCIE43XX_NT62.Service, common.EventLog
+
+[BCM43XAC_NT62_4355.Services]
+	Include = netvwifibus.inf
+	Needs   = VWiFiBus.Services
+	AddService = BCMPCIEDHD63, 2, BCMPCIE43XX_NT62.Service, common.EventLog
+;w8dhd	AddService = BCMPCIEDHD63, 2, BCMPCIE43XX_NT62.Service, common.EventLog
+
+[BCM43XAC_NT62_4377.Services]
+	Include = netvwifibus.inf
+	Needs   = VWiFiBus.Services
+	AddService = BCMPCIEDHD63, 2, BCMPCIE43XX_NT62.Service, common.EventLog
+;w8dhd	AddService = BCMPCIEDHD63, 2, BCMPCIE43XX_NT62.Service, common.EventLog
+
+[BCM43XAC_NT62_4364.HW]
+	Include = netvwifibus.inf
+	Needs   = VWiFiBus.PnPFilterRegistration.HW
+;w8dhd	Needs   = VWiFiBus.PnPFilterRegistration
+	AddReg  = MSI.reg
+
+[BCM43XAC_NT62_4355.HW]
+	Include = netvwifibus.inf
+	Needs   = VWiFiBus.PnPFilterRegistration.HW
+;w8dhd	Needs   = VWiFiBus.PnPFilterRegistration
+	AddReg  = MSI.reg
+
+[BCM43XAC_NT62_4377.HW]
+	Include = netvwifibus.inf
+	Needs   = VWiFiBus.PnPFilterRegistration.HW
+;w8dhd	Needs   = VWiFiBus.PnPFilterRegistration
+	AddReg  = MSI.reg
+
+[BCM43XX_NT.reg]
+	; Ndis Info
+	; Interfaces
+	HKR,    Ndi\Interfaces, UpperRange,     ,       "ndis5"
+	HKR,    Ndi\Interfaces, LowerRange,     ,       "ethernet,wlan,vwifi"
+
+[BCMPCIE43XX.brcm.reg]
+	HKR,    Ndi,    HelpText,               ,       %BCM43XX_HELP%
+	HKR,    Ndi,    Service,                0,      "BCMPCIEDHD63"
+;w8dhd	HKR,    Ndi,    Service,                0,      "BCMPCIEDHD63"
+
+[common.EventLog]
+	AddReg = common.AddEventLog.reg
+
+[common.AddEventLog.reg]
+	HKR,    ,       EventMessageFile,       0x00020000,     "%%SystemRoot%%\System32\netevent.dll"
+	HKR,    ,       TypesSupported,         0x00010001,     7
+
+[BCMPCIE43XX_NT62.Service]
+	DisplayName     = %BCM43XXPCIE_Service_DispName%
+	ServiceType     = 1                     ; %SERVICE_KERNEL_DRIVER%
+	StartType       = 3                     ; %SERVICE_DEMAND_START%
+	ErrorControl    = 1                     ; %SERVICE_ERROR_NORMAL%
+	ServiceBinary   = %12%\bcmpciedhd63.sys
+	LoadOrderGroup  = NDIS
+
+[BCM43XAC_NT62_4364.files]
+	bcmpciedhd63.sys,,,6
+	4364r3rtecdc.bin,4364b2rtecdc.bin,,6
+	4364r4rtecdc.bin,4364b3rtecdc.bin,,6
+	P-ekans_M-HRPN_V-m__m-7.7.txt,,,6
+	P-ekans_M-HRPN_V-u__m-7.5.txt,,,6
+	P-kauai_M-HRPN_V-m__m-7.7.txt,,,6
+	P-kauai_M-HRPN_V-u__m-7.5.txt,,,6
+	P-maui_M-HRPN_V-m__m-7.7.txt,,,6
+	P-maui_M-HRPN_V-u__m-7.5.txt,,,6
+	P-lanai_M-HRPN_V-m__m-7.7.txt,,,6
+	P-lanai_M-HRPN_V-u__m-7.5.txt,,,6
+	P-midway_M-HRPN_V-m__m-7.7.txt,,,6
+	P-midway_M-HRPN_V-u__m-7.5.txt,,,6
+	P-nihau_M-HRPN_V-m__m-7.7.txt,,,6
+	P-nihau_M-HRPN_V-u__m-7.5.txt,,,6
+	P-hanauma_M-HRPN_V-m__m-7.9.txt,,,6
+	P-hanauma_M-HRPN_V-u__m-7.7.txt,,,6
+	P-bali_M-HRPN_V-m__m-7.9.txt,,,6
+	P-bali_M-HRPN_V-u__m-7.7.txt,,,6
+	P-kahana_M-HRPN_V-m__m-7.9.txt,,,6
+	P-kahana_M-HRPN_V-u__m-7.7.txt,,,6
+	4364r3ekans.clm_blob,4364_ekans.clm_blob,,6
+	4364r3ekans.txcap_blob,4364_ekans.txcap_blob,,6
+	4364r3maui.clm_blob,4364_maui.clm_blob,,6
+	4364r3maui.txcap_blob,4364_maui.txcap_blob,,6
+	4364r3kauai.clm_blob,4364_kauai.clm_blob,,6
+	4364r3kauai.txcap_blob,4364_kauai.txcap_blob,,6
+	4364r3lanai.clm_blob,4364_lanai.clm_blob,,6
+	4364r3lanai.txcap_blob,4364_lanai.txcap_blob,,6
+	4364r3midway.clm_blob,4364_midway.clm_blob,,6
+	4364r3midway.txcap_blob,4364_midway.txcap_blob,,6
+	4364r3nihau.clm_blob,4364_nihau.clm_blob,,6
+	4364r3nihau.txcap_blob,4364_nihau.txcap_blob,,6
+	4364r4hanauma.clm_blob,4364_hanauma.clm_blob,,6
+	4364r4hanauma.txcap_blob,4364_hanauma.txcap_blob,,6
+	4364r4bali.clm_blob,4364_bali.clm_blob,,6
+	4364r4bali.txcap_blob,4364_bali.txcap_blob,,6
+	4364r4kahana.clm_blob,4364_kahana.clm_blob,,6
+	4364r4kahana.txcap_blob,4364_kahana.txcap_blob,,6
+
+[BCM43XAC_NT62_4355.files]
+	bcmpciedhd63.sys,,,6
+	4355r12rtecdc.bin,4355c1rtecdc.bin,,6
+; hawaii
+	P-hawaii_M-YSBC_V-m__m-2.5.txt,,,6
+	P-hawaii_M-YSBC_V-u__m-4.3.txt,,,6
+	4355r12hawaii.clm_blob,4355_hawaii.clm_blob,,6
+	4355r12hawaii.txcap_blob,4355_hawaii.txcap_blob,,6
+
+[BCM43XAC_NT62_4377.files]
+	bcmpciedhd63.sys,,,6
+	4377r4rtecdc.bin,4377b3rtecdc.bin,,6
+; formosa
+	P-formosa_M-SPPR_V-m__m-2.1.txt,P-formosa_M-SPPR_V-m__m.txt,,6
+	P-formosa_M-SPPR_V-m__m-2.3.txt,P-formosa_M-SPPR_V-m__m.txt,,6
+	P-formosa_M-SPPR_V-m__m-2.5.txt,P-formosa_M-SPPR_V-m__m.txt,,6
+	P-formosa_M-SPPR_V-m__m-3.1.txt,P-formosa_M-SPPR_V-m__m.txt,,6
+	P-formosa_M-SPPR_V-m__m-3.3.txt,P-formosa_M-SPPR_V-m__m.txt,,6
+	P-formosa_M-SPPR_V-m__m-3.5.txt,P-formosa_M-SPPR_V-m__m.txt,,6
+	P-formosa_M-SPPR_V-m__m-4.1.txt,P-formosa_M-SPPR_V-m__m.txt,,6
+	P-formosa_M-SPPR_V-m__m-4.3.txt,P-formosa_M-SPPR_V-m__m.txt,,6
+	P-formosa_M-SPPR_V-m__m-4.5.txt,P-formosa_M-SPPR_V-m__m.txt,,6
+	P-formosa_M-SPPR_V-u__m-2.1.txt,P-formosa_M-SPPR_V-u__m.txt,,6
+	P-formosa_M-SPPR_V-u__m-2.3.txt,P-formosa_M-SPPR_V-u__m.txt,,6
+	P-formosa_M-SPPR_V-u__m-2.5.txt,P-formosa_M-SPPR_V-u__m.txt,,6
+	P-formosa_M-SPPR_V-u__m-3.1.txt,P-formosa_M-SPPR_V-u__m.txt,,6
+	P-formosa_M-SPPR_V-u__m-3.3.txt,P-formosa_M-SPPR_V-u__m.txt,,6
+	P-formosa_M-SPPR_V-u__m-3.5.txt,P-formosa_M-SPPR_V-u__m.txt,,6
+	P-formosa_M-SPPR_V-u__m-4.1.txt,P-formosa_M-SPPR_V-u__m.txt,,6
+	P-formosa_M-SPPR_V-u__m-4.3.txt,P-formosa_M-SPPR_V-u__m.txt,,6
+	P-formosa_M-SPPR_V-u__m-4.5.txt,P-formosa_M-SPPR_V-u__m.txt,,6
+	4377r4formosa.clm_blob,4377_formosa.clm_blob,,6
+	4377r4formosa.txcap_blob,4377_formosa.txcap_blob,,6
+
+; 11 == %windir%/system32
+; 12 == %windir%/system32/drivers
+
+[DestinationDirs]
+	DefaultDestDir					= 11
+	BCM43XAC_NT62_4364.files		= 12
+	BCM43XAC_NT62_4355.files		= 12
+	BCM43XAC_NT62_4377.files		= 12
+
+[SourceDisksNames]
+	1=%BCM43XX_DiskName%,,
+
+[SourceDisksFiles]
+	bcmpciedhd63.sys=1
+	4355c1rtecdc.bin=1
+	4364b2rtecdc.bin=1
+	4364b3rtecdc.bin=1
+	4377b3rtecdc.bin=1
+	P-ekans_M-HRPN_V-m__m-7.7.txt=1
+	P-ekans_M-HRPN_V-u__m-7.5.txt=1
+	P-hawaii_M-YSBC_V-m__m-2.5.txt=1
+	P-hawaii_M-YSBC_V-u__m-4.3.txt=1
+	P-kauai_M-HRPN_V-m__m-7.7.txt=1
+	P-kauai_M-HRPN_V-u__m-7.5.txt=1
+	P-maui_M-HRPN_V-m__m-7.7.txt=1
+	P-maui_M-HRPN_V-u__m-7.5.txt=1
+	P-lanai_M-HRPN_V-m__m-7.7.txt=1
+	P-lanai_M-HRPN_V-u__m-7.5.txt=1
+	P-midway_M-HRPN_V-m__m-7.7.txt=1
+	P-midway_M-HRPN_V-u__m-7.5.txt=1
+	P-nihau_M-HRPN_V-m__m-7.7.txt=1
+	P-nihau_M-HRPN_V-u__m-7.5.txt=1
+	P-hanauma_M-HRPN_V-m__m-7.9.txt=1
+	P-hanauma_M-HRPN_V-u__m-7.7.txt=1
+	P-bali_M-HRPN_V-m__m-7.9.txt=1
+	P-bali_M-HRPN_V-u__m-7.7.txt=1
+	P-kahana_M-HRPN_V-m__m-7.9.txt=1
+	P-kahana_M-HRPN_V-u__m-7.7.txt=1
+	P-formosa_M-SPPR_V-m__m.txt=1
+	P-formosa_M-SPPR_V-u__m.txt=1
+	4364_ekans.clm_blob=1
+	4364_ekans.txcap_blob=1
+	4355_hawaii.clm_blob=1
+	4355_hawaii.txcap_blob=1
+	4364_kauai.clm_blob=1
+	4364_kauai.txcap_blob=1
+	4364_maui.clm_blob=1
+	4364_maui.txcap_blob=1
+	4364_lanai.clm_blob=1
+	4364_lanai.txcap_blob=1
+	4364_midway.clm_blob=1
+	4364_midway.txcap_blob=1
+	4364_nihau.clm_blob=1
+	4364_nihau.txcap_blob=1
+	4364_hanauma.clm_blob=1
+	4364_hanauma.txcap_blob=1
+	4364_bali.clm_blob=1
+	4364_bali.txcap_blob=1
+	4364_kahana.clm_blob=1
+	4364_kahana.txcap_blob=1
+	4377_formosa.clm_blob=1
+	4377_formosa.txcap_blob=1
+
+;Uninstall
+
+;Message Signalled Interrupt
+[MSI.reg]
+	HKR,Interrupt Management,,0x00000010
+	HKR,Interrupt Management\MessageSignaledInterruptProperties,,0x00000010
+	HKR,Interrupt Management\MessageSignaledInterruptProperties,MSISupported,0x00010001,1
+	HKR,Interrupt Management\MessageSignaledInterruptProperties,MessageNumberLimit,0x00010001,16
+
+;common for all platform
+[common.reg]
+
+	HKR,    Ndi\params\*PriorityVLANTag, ParamDesc, 0,      %PriorityVLANTag%
+	HKR,    Ndi\params\*PriorityVLANTag, type,      0,      "enum"
+	HKR,    Ndi\params\*PriorityVLANTag\enum, "0",  0,      %PriorityAndVLANDisabled%
+	HKR,    Ndi\params\*PriorityVLANTag\enum, "1",  0,      %PriorityEnabled%
+	HKR,    Ndi\params\*PriorityVLANTag\enum, "2",  0,      %VLANEnabled%
+	HKR,    Ndi\params\*PriorityVLANTag\enum, "3",  0,      %PriorityAndVLANEnabled%
+	HKR,    Ndi\params\*PriorityVLANTag,default,,"0"
+	HKR,    Ndi\params\*PriorityVLANTag,optional,,"0"
+
+	HKLM,system\CurrentControlSet\Services\NativeWiFiP\Parameters,EnableWoWLAN,0x00010001,1
+
+	HKR,    Ndi\params\MPC, ParamDesc,              0,      %MinimumPowerConsumption%
+	HKR,    Ndi\params\MPC, type,                   0,      "enum"
+	HKR,    Ndi\params\MPC\enum, "0",               0,      %Disabled%
+	HKR,    Ndi\params\MPC\enum, "1",               0,      %Enabled%
+	HKR,    Ndi\params\MPC,default,,"1"
+
+	HKR,	,"frag",          0,  "2346"
+	HKR,	,"rts",           0,  "2347"
+	HKR,	,"FrameBursting", 0,  "0"
+	HKR,	,"BTCoexist",     0,  "3"
+	HKR,	,"NetworkType",   0,  "-1"
+	HKR,	,"DxOverrideHot", 0,  "1"
+
+[wowl.capabilities.enabled.reg]
+        HKR,,   "WakeUpCapabilities", 0x00010001, "0xffffffff"
+
+[wowl.std_keywords.reg]
+        HKR, Ndi\params\*WakeOnMagicPacket, ParamDesc,  0, %WakeOnMagicPacket%
+        HKR, Ndi\params\*WakeOnMagicPacket, type,       0, "enum"
+        HKR, Ndi\params\*WakeOnMagicPacket\enum,        "0", 0, %Disabled%
+        HKR, Ndi\params\*WakeOnMagicPacket\enum,        "1", 0, %Enabled%
+        HKR, Ndi\params\*WakeOnMagicPacket,default,,    "1"
+        HKR, Ndi\params\*WakeOnMagicPacket,optional,,   "0"
+
+        HKR, Ndi\params\*WakeOnPattern, ParamDesc,      0, %WakeOnPatternMatch%
+        HKR, Ndi\params\*WakeOnPattern, type,           0, "enum"
+        HKR, Ndi\params\*WakeOnPattern\enum,            "0", 0, %Disabled%
+        HKR, Ndi\params\*WakeOnPattern\enum,            "1", 0, %Enabled%
+        HKR, Ndi\params\*WakeOnPattern,default,,        "1"
+        HKR, Ndi\params\*WakeOnPattern,optional,,       "0"
+
+        HKR, Ndi\params\*PMARPOffload, ParamDesc,       0, %ARPOffload%
+        HKR, Ndi\params\*PMARPOffload, type,            0, "enum"
+        HKR, Ndi\params\*PMARPOffload\enum,             "0", 0, %Disabled%
+        HKR, Ndi\params\*PMARPOffload\enum,             "1", 0, %Enabled%
+        HKR, Ndi\params\*PMARPOffload,default,,         "1"
+        HKR, Ndi\params\*PMARPOffload,optional,,        "0"
+
+        HKR, Ndi\params\*PMNSOffload, ParamDesc,        0, %NSOffload%
+        HKR, Ndi\params\*PMNSOffload, type,             0, "enum"
+        HKR, Ndi\params\*PMNSOffload\enum,              "0", 0, %Disabled%
+        HKR, Ndi\params\*PMNSOffload\enum,              "1", 0, %Enabled%
+        HKR, Ndi\params\*PMNSOffload,default,,          "1"
+        HKR, Ndi\params\*PMNSOffload,optional,,         "0"
+
+        HKR, Ndi\params\*PMWiFiRekeyOffload, ParamDesc, 0, %WiFiRekeyingOffload%
+        HKR, Ndi\params\*PMWiFiRekeyOffload, type,      0, "enum"
+        HKR, Ndi\params\*PMWiFiRekeyOffload\enum,       "0", 0, %Disabled%
+        HKR, Ndi\params\*PMWiFiRekeyOffload\enum,       "1", 0, %Enabled%
+        HKR, Ndi\params\*PMWiFiRekeyOffload,default,,   "1"
+        HKR, Ndi\params\*PMWiFiRekeyOffload,optional,,  "0"
+
+[cs.std_keywords.reg]
+        HKR, Ndi\Params\*PacketCoalescing,  ParamDesc,  0, %PacketCoalescing%
+        HKR, Ndi\params\*PacketCoalescing, type,      0, "enum"
+        HKR, Ndi\params\*PacketCoalescing\enum,       "0", 0, %Disabled%
+        HKR, Ndi\params\*PacketCoalescing\enum,       "1", 0, %Enabled%
+        HKR, Ndi\params\*PacketCoalescing,default,,   "1"
+        HKR, Ndi\params\*PacketCoalescing,optional,,  "0"
+
+[strings]
+	V_BCM="Broadcom"
+	BCM43XX_HELP="The Broadcom 802.11ac Network Adapter provides wireless local area networking."
+	BCM43XX_Service_DispName="Broadcom 802.11ac Network Adapter Driver"
+	BCM43XX_DiskName="802.11ac Network Adapter Install Disk"
+	BCM43XXPCIE_DeviceDesc="Broadcom 802.11ac Network Adapter"
+	BCM43XXPCIE_Service_DispName="Broadcom 802.11ac PCIE Network Adapter Driver"
+
+	Auto="Auto"
+	AutoShortLong="Auto (Short/Long)"
+	Default="Default"
+	Disable="Disable"
+	Disabled="Disabled"
+	Enable="Enable"
+	Enabled="Enabled"
+	FragmentationThreshold="Fragmentation Threshold"
+	LocallyAdministeredMACAddress="Locally Administered MAC Address"
+	Long="Long"
+	None="None"
+	OptimizeBandwidth="Optimize Bandwidth"
+	OptimizeDistance="Optimize Distance"
+	PowerSaveMode="Power Save Mode"
+	RTSThreshold="RTS Threshold"
+	RadioEnableDisable="Radio Enable/Disable"
+	Rate="Rate"
+	RoamingDecision="Roaming Decision"
+	Fast="Fast"
+	MinimumPowerConsumption="Minimum Power Consumption"
+	AssociationRoamPreference="Association Roam Preference"
+	BandPreference="Band Preference"
+	RoamingTendency="Roam Tendency"
+	Aggressive="Aggressive"
+	Moderate="Moderate"
+	Conservative="Conservative"
+	Aux="Aux"
+	Main="Main"
+	ApCompatibilityMode="AP Compatibility Mode"
+	BroaderCompat="Broader Compatibility"
+	HigherPerf="Higher Performance"
+	WME="WMM"
+	Legacy="Legacy"
+	Manage_Wireless_Settings="Manage Wireless Settings"
+	DisableRadioUponWiredConnection="Disable Upon Wired Connect"
+	SSIDAutoPromote="SSID Autopromote"
+	Loose_11h="Loose 11h"
+	Strict_11h="Strict 11h"
+	vlan_mode="VLAN Priority Support"
+	PriorityVLANTag="Priority & VLAN"
+	PriorityAndVLANDisabled="Priority & VLAN Disabled"
+	PriorityAndVLANEnabled="Priority & VLAN Enabled"
+	PriorityEnabled="Priority Enabled"
+	VLANEnabled="VLAN Enabled"
+	NetPattern="Wake Up Frame"
+	BandwidthCapability2G="2G Bandwidth Capability"
+	autoCountryDiscovery="802.11d Support (Auto-Country)"
+	ListenInterval="Assoc Listen Interval"
+	D2ListenInterval="D2 Listen Interval"
+	WakeOnMagicPacket="Wake On Magic Packet"
+	WakeOnPatternMatch="Wake On Pattern Match"
+	ARPOffload="ARP Offload"
+	NSOffload="NS Offload"
+	WiFiRekeyingOffload="WiFi Rekeying Offload"
+	PacketCoalescing="Packet Coalescing"
