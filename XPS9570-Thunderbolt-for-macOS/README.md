@@ -135,10 +135,12 @@
 
 
 ## 附
+- [AMI BIOS 提取 IFR](https://page.epnode.com/4377.html)
+
 - https://page.epnode.com/8734.html
 
 - https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.316533/page-1602#post-2086071
 
 
 # 鸣谢
-- 非常感谢 [@WildBeastRouen](https://github.com/WildBeastRouen)(XPS9570群929644389：群友1465794095) 提供 XPS9570 在黑苹果下驱动雷电的支持。
+- 非常感谢 [@WildBeastRouen](https://github.com/WildBeastRouen) (XPS9570群929644389：群友1465794095) 提供 XPS9570 在黑苹果下驱动雷电的支持。
