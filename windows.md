@@ -6,4 +6,4 @@
 
 
 # XPS 15 服务手册
-https://www.dell.com/support/manuals/zh-cn/xps-15-9570-laptop/xps-15-9570-service_manual/
+[XPS 15 服务手册](https://www.dell.com/support/manuals/zh-cn/xps-15-9570-laptop/xps-15-9570-service_manual/)
