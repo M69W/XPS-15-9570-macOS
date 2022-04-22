@@ -6,3 +6,10 @@
 # USB 在 黑苹果下偶尔出现所有外接USB设备无反应的现象，
  - 尝试性解决： Fn + Insert 休眠待机，等键盘灯灭后再唤醒。
  - 如果以上无效果，[暂时找不到解决方法](https://github.com/xxxzc/xps15-9570-macos/issues/58)。
+
+
+# XPS 9570 黑苹果下外接独显
+ - 把 对应的 aml 禁用(如 type-c.aml)
+ - 把 disable EGPU 放行
+ - 不加任何的 tb3 SSDT 
+ - 冷启动 
