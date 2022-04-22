@@ -8,8 +8,9 @@
  - 如果以上无效果，[暂时找不到解决方法](https://github.com/xxxzc/xps15-9570-macos/issues/58)。
 
 
-# XPS 9570 黑苹果下外接独显
+# XPS 9570 黑苹果下外接独显(来自群友 @1351273481)
  - 把 对应的 aml 禁用(如 type-c.aml)
  - 把 disable EGPU 放行
  - 不加任何的 tb3 SSDT 
  - 冷启动 
+ 
